@@ -16,6 +16,8 @@ public class BoardVO {
 	private int view_count;
 	private int reply_count;
 	private String bod_type;
+	private String bod_name;
+	
 	private Integer rnum; //오라클에서 생성된 rownum 행번호 필드 get,set
  	
 	private String[] files;//첨부파일용 변수 추가

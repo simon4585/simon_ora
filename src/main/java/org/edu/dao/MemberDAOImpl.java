@@ -7,16 +7,19 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.edu.vo.MemberVO;
 import org.edu.vo.PageVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
    
 @Repository
 
 public class MemberDAOImpl implements IF_MemberDAO {
+	
+	/*@Autowired
+	private IF_MemberDAO mapperQuery;*/
    
    private static String mapperQuery = "org.edu.dao.IF_MemberDAO";
-   
-   
+	
    @Inject
    private SqlSession sqlSession;
    	

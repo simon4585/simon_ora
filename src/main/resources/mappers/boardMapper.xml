@@ -35,6 +35,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			bod_type = #{searchBoard}
 			)
 		</if>
+		<if test= "searchBoard_type !=null and !searchBoard_type.equals('')">
+		    AND(
+		    bod_name = #{searchBoard_type}
+		    )
+		</if>
 	</sql>
 	<!-- mybatis 오라클용 추가 -->
 	<!-- 속성중에 order는 insert 이전 이후 구분하는 역할 --> 

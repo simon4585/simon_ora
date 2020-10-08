@@ -31,11 +31,11 @@
                 <div class="col-3" style="display:inline-block" >
                     <select name="searchBoard" class="form-control">
                       <option value="">게시판선택</option>
-                      <c:forEach items="${boardTypeMenu}" var="boardTypeMenu" >
-                      <option value="${boardTypeMenu.bod_type}" <c:out value="${(session_bod_type eq boardTypeMenu.bod_type)?('selected'):('')}" />>${boardTypeMenu.bod_name}</option>>
+                      <c:forEach items="${boardTypeMenu}" var="boardTypeMenu">
+                      <option value="${boardTypeMenu.bod_type}" <c:out value="${(session_bod_type eq boardTypeMenu.bod_type)?('selected'):('')}" />>${boardTypeMenu.bod_name}</option>
                       </c:forEach>
-                      <%-- <option value="notice"  <c:out value="${(session_bod_type eq 'notice')?('selected'):('')}" />>공지사항</option>
-                      <option value="gallery" <c:out value="${(session_bod_type eq 'gallery')?('selected'):('')}" />>갤러리</option> --%>
+                      <%-- <option value="notice" <c:out value="${(session_bod_type eq 'notice')?('selected'):('')}" />>공지사항</option>
+                      <option value="gallery" <c:out value="${(session_bod_type eq 'gallery')?('selected'):('')}" />>겔러리</option> --%>
                     </select>
                 </div>
                 <div class="col-3" style="display:inline-block" >
@@ -44,10 +44,10 @@
                     </select>
                 </div>
                 <div class="search" style="display:inline">
-                <input type="text" name="searchKeyword" placeholder="">
-                <div class="button" style="display:inline">
-                   <button>검색</button>
-                </div>
+					 <input type="text" name="searchKeyword" placeholder="">
+					 <div class="button" style="display:inline">
+					    <button>검색</button>
+					 </div>
                 </div>
                 </form>
     
@@ -98,20 +98,20 @@
                </td>
            <td>
           <nav aria-label="Contacts Page Navigation">
-             <ul class="pagination" style="position:relative;left:40%;">
-             <c:if test="${pageVO.prev}">
-             <li class="page-item">
-                <a class="page-link" href="/admin/board/list?page=${pageVO.startPage-1}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}">이전</a>
-             </li>
-             </c:if>
-             <c:forEach begin="${pageVO.startPage}" end="${pageVO.endPage}" var="idx">
-                <li class='page-item <c:out value="${idx==pageVO.page?'active':''}"/>'><a href="/admin/board/list?page=${idx}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}" class="page-link">${idx}</a></li>
-             </c:forEach>
-             <c:if test="${pageVO.next}">
-             <li class="page-item">
-                <a class="page-link" href="/admin/board/list?page=${pageVO.endPage+1}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}">다음</a>
-             </li>
-             </c:if>
+          	<ul class="pagination" style="position:relative;left:40%;">
+          	<c:if test="${pageVO.prev}">
+       		<li class="page-item">
+          		<a class="page-link" href="/admin/board/list?page=${pageVO.startPage-1}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}">이전</a>
+       		</li>
+          	</c:if>
+          	<c:forEach begin="${pageVO.startPage}" end="${pageVO.endPage}" var="idx">
+          		<li class='page-item <c:out value="${idx==pageVO.page?'active':''}"/>'><a href="/admin/board/list?page=${idx}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}" class="page-link">${idx}</a></li>
+          	</c:forEach>
+          	<c:if test="${pageVO.next}">
+       		<li class="page-item">
+          		<a class="page-link" href="/admin/board/list?page=${pageVO.endPage+1}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}">다음</a>
+       		</li>
+          	</c:if>
             </ul>  
           </nav>
                </td>

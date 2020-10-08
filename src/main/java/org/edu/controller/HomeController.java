@@ -128,7 +128,7 @@ public class HomeController {
 	 * 
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/board/delete", method = RequestMethod.POST)
+	@RequestMapping(value = "board_delete", method = RequestMethod.POST)
 	public String boardDelete(@RequestParam("bno") Integer bno, Locale locale, RedirectAttributes rdat)
 			throws Exception {
 		List<String> files = boardService.selectAttach(bno);

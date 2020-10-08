@@ -13,7 +13,18 @@ public class PageVO {
 	private String searchType;
 	private String searchKeyword;
 	private String searchBoard;
+	private String searchBoard_type;
 	
+	
+	
+	public String getSearchBoard_type() {
+		return searchBoard_type;
+	}
+
+	public void setSearchBoard_type(String searchBoard_type) {
+		this.searchBoard_type = searchBoard_type;
+	}
+
 	public String getSearchType() {
 		return searchType;
 	}

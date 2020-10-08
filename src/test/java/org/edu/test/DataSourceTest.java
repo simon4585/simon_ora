@@ -6,7 +6,9 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.sql.DataSource;
 
+import org.edu.service.IF_BoardService;
 import org.edu.service.IF_MemberService;
+import org.edu.vo.BoardTypeVO;
 import org.edu.vo.MemberVO;
 import org.edu.vo.PageVO;
 import org.junit.Test;
@@ -19,6 +21,9 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @ContextConfiguration(locations ={"file:src/main/webapp/WEB-INF/spring/**/*.xml"})
 @WebAppConfiguration
 public class DataSourceTest {
+	
+	@Inject
+	private IF_BoardService boardService;
 
    @Inject
    private DataSource ds;
@@ -26,6 +31,15 @@ public class DataSourceTest {
    @Inject
    private IF_MemberService memberService;
    
+   @Test
+   public void insertBoardType() throws Exception {
+	   BoardTypeVO boardTypeVO = new BoardTypeVO();
+	   boardTypeVO.setBod_type("먹거리");
+	   boardTypeVO.setBod_name("해외 먹거리");
+	   boardTypeVO.setBod_sun(1);
+	   //System.out.println(boardTypeVO.toString());
+	   boardService.insertBoardType(boardTypeVO);
+   }
    
    @Test
    public void testConnection()throws Exception{

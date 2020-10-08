@@ -45,8 +45,6 @@ if('${msg}' != ""){
 						</li>
 						<li><a href="/logout">로그아웃</a>
 						</li>
-						<li><a href="/mypage/update">마이페이지</a>
-						</li>
 						<c:if test="${session_levels eq 'ROLE_ADMIN'}">
 							<li><a href="/admin">관리자</a>
 							</li>
@@ -55,7 +53,7 @@ if('${msg}' != ""){
 					<c:otherwise>
 						<li><a href="/login">로그인</a>
 						</li>
-						<li><a href="/mypage/insert">회원가입</a>
+						<li><a href="#">회원가입</a>
 						</li>
 					</c:otherwise>
 				</c:choose>
@@ -71,14 +69,10 @@ if('${msg}' != ""){
                             </ul>
                         </div>
 					</li>
-					<li><a href="/board/list?searchBoard=notice" class="openAll2">고객센터</a>
+					<li><a href="/board/list" class="openAll2">고객센터</a>
 				        <div class="gnb_depth gnb_depth2_2">
                             <ul class="submenu_list">
-                            <c:forEach items="${boardTypeMenu}" var="boardTypeMenu">
-                            <li><a href="/board/list?searchBoard=${boardTypeMenu.bod_type}">${boardTypeMenu.bod_name}</a></li>
-                            </c:forEach>
-                                <!-- <li><a href="/board/list?searchBoard=notice">공지사항</a></li>
-                                <li><a href="/board/list?searchBoard=gallery">갤러리</a></li> -->
+                                <li><a href="/board/list">공지사항</a></li>
                             </ul>
                         </div>
 					</li>
@@ -90,5 +84,3 @@ if('${msg}' != ""){
 			<!-- //header_cont -->
 		</div>
 	</header>
-	
-	

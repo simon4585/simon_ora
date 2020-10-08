@@ -22,10 +22,10 @@
           <!-- /.col-md-6 -->
         </div>
         <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
+      <!-- /.container-fluid -->
+    
     <!-- /.content -->
-  </div>
+  
   <!-- /.content-wrapper -->
 
   <%@ include file="include/footer.jsp" %>
