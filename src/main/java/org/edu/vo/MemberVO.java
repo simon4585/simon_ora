@@ -16,6 +16,9 @@ public class MemberVO {
 	private Date reg_date;
 	private Date update_date;
 	
+	
+	
+	
 	public String getUser_id() {
 		return user_id;
 	}

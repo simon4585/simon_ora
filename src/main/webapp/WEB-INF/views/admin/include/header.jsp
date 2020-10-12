@@ -122,7 +122,7 @@ if('${msg}' != ""){
 	            <ul class="nav nav-treeview">
 		              <c:forEach items="${boardTypeMenu}" var="boardTypeMenu" >
 			              <li class="nav-item">
-			                <a href="/admin/board/list?searchBoard=${boardTypeMenu.bod_type}" class="nav-link">
+			                <a href="/admin/board/list?searchBoard=${boardTypeMenu.bod_type}&searchBoard_type=${boardTypeMenu.bod_name}" class="nav-link">
 			                  <i class="far fa-circle nav-icon"></i>
 			                  <p>${boardTypeMenu.bod_name}</p>
 			                </a>
