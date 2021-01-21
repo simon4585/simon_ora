@@ -224,7 +224,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.8.11.1</version>
+			<version>2.9.10.7</version>
 		</dependency>
 		<!-- 스케줄 프로그램 때문에 추가 -->
 		<dependency>
